@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // Optional
+    @State var showView: Bool = false
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            Home()
+            if showView {
+                Home()
+            }
         } //: SCROLLVIEW
         .frame(maxWidth: .infinity)
         .background {
@@ -35,6 +41,11 @@ struct ContentView: View {
             .ignoresSafeArea()
         } //: BACKGROUND
         .preferredColorScheme(.dark)
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                showView = true
+            }
+        }
     }
 }
 

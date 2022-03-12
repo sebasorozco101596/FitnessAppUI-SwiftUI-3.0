@@ -21,5 +21,5 @@ struct Ring: Identifiable {
 var rings: [Ring] = [
     Ring(progress: 72, value: "Steps", keyIcon: "figure.walk", keyColor: Color("Green")),
     Ring(progress: 36, value: "Calories", keyIcon: "flame.fill", keyColor: Color("Red")),
-    Ring(progress: 91, value: "Sleep time", keyIcon: "😴", keyColor: Color("Green"), isText: true)
+    Ring(progress: 91, value: "Sleep time", keyIcon: "😴", keyColor: Color("Purple"), isText: true)
 ]
